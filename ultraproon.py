@@ -161,45 +161,23 @@ if st.session_state.logged_in:
                                 try:
                                     image_bytes = base64.b64decode(image_data)
                                     image = Image.open(BytesIO(image_bytes))
-                                    st.image(image, caption="Generated Image", use_container_width=True)
+                                    st.image(image, caption="Generated Image", width=stretch)
                                     st.success("Image successfully decoded from base64.")
                                 except Exception as e:
                                     st.error(f"Error decoding image: {e}")
                             
-                            # Save the image locally
-                            try:
-                                os.makedirs("images", exist_ok=True)
-                                image_index = 1
-                                image_path = os.path.join("images", f"generated_image_{image_index}.jpeg")
-                                while os.path.exists(image_path):  # Ensure a unique filename
-                                    image_index += 1
-                                    image_path = os.path.join("images", f"generated_image_{image_index}.jpeg")
 
-                                image.save(image_path)
-                                st.success(f"Image saved to {image_path}")
 
                                     # Print the image URL
                                 st.write(f"Image URL: {image_data}")
 
-                                # Guardar el prompt detallado con un nombre único
-                                prompt_index = image_index
-                                prompt_path = os.path.join("images", f"prompt_{prompt_index}.txt")
-                                while os.path.exists(prompt_path):
-                                    prompt_index += 1
-                                    prompt_path = os.path.join("images", f"prompt_{prompt_index}.txt")
 
-                                with open(prompt_path, 'w', encoding='utf-8') as f:
-                                    f.write("Prompt Kotex:\n")
-                                    f.write(base_prompt + "\n\n")
-                                    #f.write("Image (Base64 PNG):\n")
-                                    #f.write(image_base64)
 
                                 st.success(f"Prompt : {prompt_path}")
 
 
                                 
-                            except Exception as e:
-                                st.error(f"Error saving the image: {e}")
+
 
                             break  # Exit the loop once the image is processed
                         else:
