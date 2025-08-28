@@ -23,7 +23,7 @@ password_correct = os.getenv("PASSWORD")
 
 # 1. Create the login form at the beginning
 def login():
-    
+    st.set_page_config(page_title="LUNA", layout="centered")
     st.title("Login to LUNA")
 
     username = st.text_input("Username")
