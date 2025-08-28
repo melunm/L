@@ -23,7 +23,7 @@ password_correct = os.getenv("PASSWORD")
 
 # 1. Create the login form at the beginning
 def login():
-    st.title("Login to Streamlit App")
+    st.title("Login to LUNA")
 
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
@@ -48,9 +48,9 @@ if st.session_state.logged_in:
 
 
 
-    st.set_page_config(page_title="AI Image Description - GPT-4 Vision", layout="centered")
-    st.title("📷 AI Image Description with GPT-4 Vision")
-    st.write("Upload an image and get a detailed description from OpenAI's GPT-4 Vision model. After the description, you can ask questions about the image!")
+    st.set_page_config(page_title="LUNA Image Description", layout="centered")
+    st.title("LUNA Image Description")
+    st.write("Upload an image and get a detailed description from AI model. After the description, you can ask questions about the image!")
 
     uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
