@@ -51,7 +51,7 @@ if st.session_state.logged_in:
 
     st.set_page_config(page_title="LUNA Image", layout="centered")
     st.title("LUNA Image Description")
-    st.write("Sube cualquier imagen y deja que la inteligencia artificial genere una descripción detallada y precisa de lo que ve. Luego, usa ese análisis como base para: Escribir una historia inspirada en la imagen. Crear contenido para una página web o blog. Diseñar publicaciones para redes sociales con textos y hashtags atractivos. Responder preguntas sobre el contenido, contexto o significado de la imagen. Generar descripciones de productos o textos publicitarios. Explorar interpretaciones creativas o educativas. Desde el análisis de escenas hasta el reconocimiento de objetos, emociones o estilo visual, la IA convierte cualquier imagen en contenido útil y valioso.")
+    st.write("Sube cualquier imagen y deja el trabajo a la inteligencia artificial")
 
     uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
