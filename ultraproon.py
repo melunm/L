@@ -152,7 +152,7 @@ if st.session_state.logged_in:
                                 try:
                                     image_response = requests.get(image_data)
                                     image = Image.open(BytesIO(image_response.content))
-                                    st.image(image, caption="Generated Image", use_container_width=True)
+                                    st.image(image, caption="Generated Image", width=stretch)
                                     st.success("Image successfully downloaded from URL.")
                                 except Exception as e:
                                     st.error(f"Error downloading image from URL: {e}")
