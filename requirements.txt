@@ -1,0 +1,10 @@
+streamlit
+Pillow
+openai
+python-dotenv
+langchain
+langchain-groq
+
+
+
+#pip install -r requirements.txt
