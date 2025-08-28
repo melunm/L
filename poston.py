@@ -48,9 +48,9 @@ if st.session_state.logged_in:
 
 
 
-    st.set_page_config(page_title="LUNA Image Description", layout="centered")
+    st.set_page_config(page_title="LUNA Image", layout="centered")
     st.title("LUNA Image Description")
-    st.write("Upload an image and get a detailed description from AI model. After the description, you can ask questions about the image!")
+    st.write("Upload an image and get a detailed description from AI model. After, you do a post, a web site, storytelling or answers questions using as base the image!")
 
     uploaded_file = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
 
