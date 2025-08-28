@@ -23,6 +23,7 @@ password_correct = os.getenv("PASSWORD")
 
 # 1. Create the login form at the beginning
 def login():
+    
     st.title("Login to LUNA")
 
     username = st.text_input("Username")
@@ -80,6 +81,7 @@ if st.session_state.logged_in:
     chain = prompt_template | llm
 
     # Streamlit UI setup
+    st.set_page_config(page_title="LUNA", layout="centered")
     st.title("LUNA")
 
     # Input field for the user to provide a base prompt
