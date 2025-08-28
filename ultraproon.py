@@ -23,7 +23,7 @@ password_correct = os.getenv("PASSWORD")
 
 # 1. Create the login form at the beginning
 def login():
-    st.title("Login to Streamlit App")
+    st.title("Login to LUNA")
 
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
@@ -80,10 +80,10 @@ if st.session_state.logged_in:
     chain = prompt_template | llm
 
     # Streamlit UI setup
-    st.title("AI Image Prompt Generator and Image Creator")
+    st.title("LUNA")
 
     # Input field for the user to provide a base prompt
-    base_prompt = st.text_input("Enter a base prompt:", value="brunette woman")
+    base_prompt = st.text_input("Enter a base prompt:", value="write")
 
     # Button to trigger the image generation
     if st.button("Generate Image"):
