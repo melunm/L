@@ -20,7 +20,8 @@ password_correct = os.getenv("PASSWORD")
 
 # 1. Create the login form at the beginning
 def login():
-    st.title("Login to Streamlit App")
+	st.set_page_config(page_title="LUNA", layout="centered")
+    st.title("Login to LUNA")
 
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
@@ -47,7 +48,8 @@ if st.session_state.logged_in:
         st.session_state.messages = [{"role": "system", "content": "You are an Effective Instagram Reels copywriting Expert"}]
 
     # Display chat messages
-    st.title("💬 Chat with OpenAI")
+    st.set_page_config(page_title="LUNA", layout="centered")
+	st.title("💬 Chat with LUNA")
     for msg in st.session_state.messages[1:]:  # Skip system prompt
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
