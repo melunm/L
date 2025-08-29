@@ -20,8 +20,10 @@ password_correct = os.getenv("PASSWORD")
 
 # 1. Create the login form at the beginning
 def login():
-	st.set_page_config(page_title="LUNA", layout="centered")
+    st.set_page_config(page_title="LUNA", layout="centered")
     st.title("Login to LUNA")
+    
+
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
     
@@ -48,7 +50,7 @@ if st.session_state.logged_in:
 
     # Display chat messages
     st.set_page_config(page_title="LUNA", layout="centered")
-	st.title("💬 Chat with LUNA")
+    st.title("💬 LUNA")
     for msg in st.session_state.messages[1:]:  # Skip system prompt
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
